@@ -1,0 +1,90 @@
+/* # = selection d'id */
+/* ========== VARIABLES ========== */ 
+:root {
+    /* Couleur */
+    --Robert: #c40c06ed;
+    --Rony: #5cca13;
+    --ISI-Dakar: #e616a7;
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #e0e7ff;
+    --secondary: #10b981;
+    --dark: #1f2937;
+    --light: #f9fafb;
+    --gray: #6b7280;
+    --white: #ffffff;
+    --black: #111827;
+    --orange: #ef6109;
+    --rouge: #e80a0a;
+    --violet: #e218f8;
+  
+    /*  Ombres */
+    --shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    /* Border radius */
+    --radius: 1rem;
+    /* Transitions */
+    --transition: all 0.3s ease;
+}
+/* transition: le temps que l'element va prendre pour se manifester (bien revoir encore)------------------------------------------------------ */
+/* DARK MODE Commit 6 ========================================= */
+/* [data-theme="dark"] {
+    --primary: #818cf8;
+    --dark: #f9fafb;
+    --light: #1f2937;
+    --white: #111827;
+    --black: #f9fafb;
+} */
+
+* { margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+
+     /*::selection : Stylise le texte sélectionné par l'utilisateur( trouver dans le cour de selecteur avancer)-------------------------------------------  */
+/* C'est ce qui gere la selection */
+     ::selection { 
+  color: rgb(150, 13, 13);
+    background-color: rgba(222, 68, 214, 0.441);
+}
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--light);
+    /* background: linear-gradient(135deg, var(--secondary), var(--primary-dark),var(--orange)); */
+    color: var(--black);
+    transition: var(--transition);
+}
+
+/* pour comprendre les "," il faut regarder la video "formulaire selecteur avancer, à 38:00" */
+h1, h2, h3, h4, .navbar-brand, .price { 
+    /* font-family: 'Space Grotesk', sans-serif; */
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--orange);
+ }
+ /* ========== NAVBAR ========== */
+/* .navbar { background: var(--white); transition: var(--transition); padding: 1rem 0; } */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    background-color: rgba(var(--light-color), 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-scrolled { 
+    padding: 0.5rem 0; 
+    box-shadow: var(--shadow); 
+}
+.navbar-brand i, .step-icon, .category-card i, .value-card i { 
+    color: var(--primary); 
+   
+}
+/* rejoindre Afritalent */
+.btn-cta { border-radius: var(--radius); 
+    padding: 0.5rem 1.5rem; 
+    background-color: var(--primary);
+}
+/* ========== HERO ==========*/
+/* .hero {
+    background: linear-gradient(135deg, var(--secondary), var(--primary-dark),var(--orange));
+    color: white;
+} */
+ 
